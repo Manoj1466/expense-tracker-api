@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block main %}
+<div id="mainBlock">
+    
+  <div class="box">
+    <a href="{% url 'expense_page'  %}">
+      <button aria-label="Add Expense">
+        <img src="/media/images/add.png" alt="Add Expense">
+      </button>
+    </a>
+    <p>Create New Expense</p>
+  </div>
+  
+  <div class="box">
+    <a href="{% url 'showcase_page' %}">
+      <button aria-label="Show Expense" >
+        <img src="/media/images/showing-results.png" alt="Add Expense">
+      </button>
+    </a>
+    
+    <p>Show Expense</p>
+  </div>
+  
+</div>
+{% endblock %}

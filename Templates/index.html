@@ -1,0 +1,56 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/expense.css' %}">
+  <link rel="stylesheet" href="{% static 'css/btn.css' %}">
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  {% block addcss %}
+
+  {% endblock %}
+  {% block addcss2 %}
+
+  {% endblock %}
+  {% block addcss3 %}
+
+  {% endblock %}
+</head>
+<body>
+  <header>
+    <div id="heading">
+      <h1>EXPENSE TRACKER APPLICATION</h1>
+    </div>
+    <div id="logout">
+      {% if request.user.is_authenticated %}
+      <a href="{% url 'logouturl' %}">Logout</a>
+      {{request.user.username}}
+      {% endif %}
+    </div>
+    <h1></h1>
+  </header>
+  {% block main %}
+  <div id="mainContainer">
+    <div>
+      <p>✅ Create your account and log in securely.</p>
+      <p>💰 Add your daily expenses with category, amount, and date.</p>  
+      <p>📝 Edit or delete any expense entries.</p>
+      <p>👀 View a list of your expenses, filtered by date or category.</p>
+      <p>📊 Get expense summaries – see how much you're spending and where.</p>
+      <p>🔐 Your data is private – only you can view and manage your expenses.</p>
+      <p>📦 Fast and clean API responses with user-friendly messages.</p>
+      <p>📅 Track your spending trends over days, weeks, or months.</p>    
+    </div>
+    <div id="btns"> 
+      <a href="{% url 'register_page'  %}">Register</a>
+      <a href="{% url 'login_page' %}">Login</a>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+</html>

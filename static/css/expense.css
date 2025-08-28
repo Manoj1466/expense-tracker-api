@@ -1,0 +1,77 @@
+
+.expense-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.expense-form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.expense-form-container form {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin-bottom: 15px; /* space for message below */
+}
+
+.expense-form-container form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.expense-form-container form input,
+.expense-form-container form select,
+.expense-form-container form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.expense-form-container form button {
+  width: 100%;
+  background-color: #2d89ef;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.expense-form-container form button:hover {
+  background-color: #2066c0;
+}
+
+.message {
+  width: 350px;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  background-color: #e6ffe6;
+  padding: 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+

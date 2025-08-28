@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block main %}
+
+<div class="expense-form-container">
+  <h2>Add New Expense</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">SUBMIT</button>
+  </form>
+  {% if messages %}
+  <div class="message">
+    {% for message in messages %}
+      <p class="{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div id="back-btn">
+    <a href="{% url 'main_page' %}"><button>Go to Main</button></a>
+  </div>
+</div>
+
+
+{% endblock %}
